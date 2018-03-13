@@ -1,0 +1,11 @@
+---
+  - name: "Writing a play to deploy hello world application"
+    hosts: opscenter 
+    user: ec2-user
+    become: true
+    become_user: root
+    gather_facts: no
+    
+    tasks:
+      - name: "Install opscenter"
+        script: /home/ec2-user/opscenter.sh 
